@@ -8,7 +8,9 @@ export default function Layout({ children, home } : any) {
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        
       </Head>
+      {children}
     </div>
   );
 }
