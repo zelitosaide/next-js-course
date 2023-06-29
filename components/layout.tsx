@@ -1,5 +1,7 @@
 import Head from "next/head";
 import styles from "./layout.module.css";
+import Image from "next/image";
+import utilStyles from "@/styles/utils.module.css";
 
 const name = "Zelito Atumane Saide";
 export const siteTitle = "Next.js Sample Website";
@@ -22,6 +24,23 @@ export default function Layout({ children, home } : any) {
         <meta name="og:image" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <header className={styles.header}>
+        {home ? (
+          <>
+            <Image
+              priority
+              src="/images/profile.jpg"
+              className={utilStyles.borderCircle}
+              height={144}
+              width={144}
+              alt="Nao"
+            />
+            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+          </>
+        ) : (
+          ''
+        )}
+      </header>
       {children}
     </div>
   );
