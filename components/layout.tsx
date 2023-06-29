@@ -1,3 +1,7 @@
+import styles from "./layout.module.css";
+
 export default function Layout({ children } : any) {
-  return <div>{children}</div>;
+  const className = styles.container;
+
+  return <div className={className}>{children}</div>;
 }
