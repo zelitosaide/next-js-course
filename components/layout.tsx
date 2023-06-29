@@ -5,8 +5,6 @@ const name = "Zelito Atumane Saide";
 export const siteTitle = "Next.js Sample Website";
 
 export default function Layout({ children, home } : any) {
-  const className = styles.container;
-
   return (
     <div className={styles.container}>
       <Head>
@@ -21,6 +19,8 @@ export default function Layout({ children, home } : any) {
             siteTitle,
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
+        <meta name="og:image" content={siteTitle} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       {children}
     </div>
