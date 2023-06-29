@@ -6,7 +6,6 @@ export default function Home() {
     <div>
       <Head>
         <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>
         Read <Link href="/posts/first-post">this page.</Link>
