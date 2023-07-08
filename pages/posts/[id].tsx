@@ -3,7 +3,6 @@ import { getAllPostIds, getPostData } from "@/lib/posts";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
-
   return {
     paths,
     fallback: false
@@ -20,5 +19,13 @@ export async function getStaticProps({ params } : any) {
 }
 
 export default function Post({ postData } : any) {
-  return <Layout></Layout>;
+  return (
+    <Layout>
+      {postData.title}
+      <br />
+      {postData.id}
+      <br />
+      {postData.date}
+    </Layout>
+  );
 }
