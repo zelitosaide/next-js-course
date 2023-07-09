@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function PostList({ posts } : any) {
   return (
-    <ul className="w-48 bg-green-950 p-2">
+    <ul className="w-48 shrink-0 bg-green-950 p-2">
       {posts.map((post : any) => (
         <li key={post.id}>
           <Link 
