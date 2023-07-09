@@ -15,7 +15,7 @@ export default function PostList({ posts } : any) {
           <li key={post.id} className="m-2">
             <Link 
               href={`/blog/${post.id}`}
-              className={`text-sm bg-slate-500 p-1 ${isActive ? "text-red-400" : ""}`}
+              className={`text-sm bg-slate-500 p-1 rounded ${isActive ? "text-red-400" : ""}`}
             >
               {post.title.slice(0, 16)}...
             </Link>
