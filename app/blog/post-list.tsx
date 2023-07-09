@@ -12,12 +12,12 @@ export default function PostList({ posts } : any) {
         const isActive = pathname.split("/")[pathname.split("/").length - 1] == post.id;
 
         return (
-          <li key={post.id}>
+          <li key={post.id} className="m-2">
             <Link 
               href={`/blog/${post.id}`}
-              className={`text-sm bg-slate-500 m-1 ${isActive ? "text-red-400" : ""}`}
+              className={`text-sm bg-slate-500 p-1 ${isActive ? "text-red-400" : ""}`}
             >
-              {post.title.slice(0, 20)}...
+              {post.title.slice(0, 16)}...
             </Link>
           </li>
         );
