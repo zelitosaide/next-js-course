@@ -9,9 +9,12 @@ export default async function BlogLayout({
   const posts = await res.json();
 
   return (
-    <div>
-      <PostList posts={posts} />
-      {children}
-    </div>
+    <>
+      <h1 className="bg-orange-500">Blog Layout</h1>
+      <div className="flex">
+        <PostList posts={posts} />
+        {children}
+      </div>
+    </>
   );
 }
