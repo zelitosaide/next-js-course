@@ -1,3 +1,3 @@
 export default function Logo() {
-  return <h1 className="displa">Logo</h1>;
+  return <h1 className="inline-block">Logo</h1>;
 }
