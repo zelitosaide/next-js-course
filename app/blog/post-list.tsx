@@ -7,7 +7,7 @@ export default function PostList({ posts } : any) {
         <li key={post.id}>
           <Link 
             href={`/blog/${post.id}`}
-            className="text-sm"
+            className="text-sm bg-slate-500 m-1"
           >
             {post.title}
           </Link>
