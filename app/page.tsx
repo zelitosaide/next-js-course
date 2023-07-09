@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <main>
-      <h3 onClick={() => { setCount(count + 1); }}>Hello {count}</h3>
+      <button onClick={() => { setCount(count + 1); }}>Hello {count}</button>
     </main>
   );
 }
