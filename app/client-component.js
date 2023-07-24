@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import SearverComponent from "./server-component";
 
 export default function ClientComponent() {
