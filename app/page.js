@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Counter, { Button } from "./counter";
+import ClientComponent from "./client-component";
 
 export default function Home() {
   return (
@@ -118,6 +119,8 @@ export default function Home() {
           </h2>
 
           <Button />
+
+          <ClientComponent />
 
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
