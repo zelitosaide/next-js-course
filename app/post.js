@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function Post({ post }) {
+export default function Post({ post, console }) {
   const [count, setCount] = useState(100);
 
   return (
