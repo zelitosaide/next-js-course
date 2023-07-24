@@ -1,5 +1,5 @@
 "use client";
 
 export default function SearchBar() {
-  return <input />;
+  return <input className="text-black" />;
 }

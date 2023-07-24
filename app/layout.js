@@ -25,5 +25,5 @@ export default function RootLayout({ children }) {
 }
 
 function Logo() {
-  return <img src="/next.svg" />;
+  return <img src="/next.svg" className='bg-white' />;
 }
