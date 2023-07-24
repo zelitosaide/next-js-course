@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Counter, { Button } from "./counter";
+
 import ClientComponent from "./client-component";
 import SearverComponent from "./server-component";
 
