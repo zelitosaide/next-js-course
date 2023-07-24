@@ -2,14 +2,13 @@
 
 import { useState } from "react";
 
-import SearverComponent from "./server-component";
-
-export default function ClientComponent() {
+export default function ClientComponent({ children }) {
   const [count, setCount] = useState(0);
 
   return (
     <div className="bg-red">
-      <SearverComponent />
+      {/* <SearverComponent /> */}
+      {children}
       <button onClick={function() { setCount(count + 1); }}>click me {count}</button>
     </div>
   );
