@@ -1,5 +1,5 @@
 export default function Page() {
   return (
-    <div></div>
+    <div className="bg-yellow">Home</div>
   );
 }
