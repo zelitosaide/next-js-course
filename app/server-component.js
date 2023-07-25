@@ -5,7 +5,7 @@ export default async function SearverComponent() {
   // const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
   // const response = getData();
   // const post = await response.json();
-  const { data: post, key } = await getData();
+  const { data: post, key, public_key } = await getData();
 
   function console() {
     console.log("KEY", key);
@@ -13,7 +13,7 @@ export default async function SearverComponent() {
 
   return (
     <div>
-      {key}
+      {key + public_key}
       <Post post={post} console={JSON.stringify(console)} />
     </div>
   );
