@@ -3,7 +3,7 @@ export async function getData() {
     headers: {
       authorization: process.env.API_KEY,
     },
-  })
+  });
  
-  return res.json()
+  return res.json();
 }
