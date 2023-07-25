@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 
 import SearchBar from "./search-bar";
 import ThemeProvider from "./theme-provider";
+// import { Providers } from "./providers";
 
 // import { AuthProvider } from "some-client-package";
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         {/* <ThemeContext.Provider value="dark"> */}
         {/* <AuthProvider> */}
+        {/* <Providers> */}
           <ThemeProvider>
             <nav>
               <Logo />
@@ -30,6 +32,7 @@ export default function RootLayout({ children }) {
             </nav>
             {children}
           </ThemeProvider>
+        {/* </Providers> */}
         {/* </AuthProvider> */}
         {/* </ThemeContext.Provider> */}
       </body>
