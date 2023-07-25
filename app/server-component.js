@@ -10,7 +10,7 @@ export default async function SearverComponent() {
 
   return (
     <div>
-      <Post post={post} console={console} />
+      <Post post={post} console={JSON.stringify(console)} />
     </div>
   );
 }
