@@ -1,4 +1,4 @@
-import { db } from "../lib/database";
+import { db } from "../api/database";
 
 export default async function PostsLayout({ children }) {
   const result = await db.query("SELECT NOW();");
