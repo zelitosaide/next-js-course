@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import SearchBar from "./search-bar";
 import ThemeProvider from "./theme-provider";
 
+// import { AuthProvider } from "some-client-package";
+
 // import { createContext } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,13 +22,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {/* <ThemeContext.Provider value="dark"> */}
-        <ThemeProvider>
-          <nav>
-            <Logo />
-            <SearchBar />
-          </nav>
-          {children}
-        </ThemeProvider>
+        {/* <AuthProvider> */}
+          <ThemeProvider>
+            <nav>
+              <Logo />
+              <SearchBar />
+            </nav>
+            {children}
+          </ThemeProvider>
+        {/* </AuthProvider> */}
         {/* </ThemeContext.Provider> */}
       </body>
     </html>
