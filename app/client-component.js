@@ -1,17 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getData } from "./lib/data";
+// import { getData } from "./lib/data";
 
 export default function ClientComponent({ children }) {
   const [count, setCount] = useState(0);
 
-  useEffect(function() {
-    async function get() {
-      console.log(await getData());
-    }
-    get();
-  }, []);
+  // useEffect(function() {
+  //   async function get() {
+  //     console.log(await getData());
+  //   }
+  //   get();
+  // }, []);
 
   return (
     <div className="bg-red">

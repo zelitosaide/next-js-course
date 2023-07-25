@@ -1,3 +1,5 @@
+import "server-only";
+
 export async function getData() {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos/2", {
     headers: {
