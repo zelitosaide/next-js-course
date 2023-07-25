@@ -8,11 +8,12 @@ export default async function SearverComponent() {
   const { data: post, key } = await getData();
 
   function console() {
-    console.log(post);
+    console.log("KEY", key);
   }
 
   return (
     <div>
+      {key}
       <Post post={post} console={JSON.stringify(console)} />
     </div>
   );
