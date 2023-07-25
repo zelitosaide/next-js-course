@@ -5,5 +5,9 @@ export async function getData() {
     },
   });
   const post = await res.json();
-  return { data: post, key: process.env.API_KEY };
+  return { 
+    data: post, 
+    key: process.env.API_KEY, 
+    public_key: process.env.NEXT_PUBLIC_API_KEY 
+  };
 }
