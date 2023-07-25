@@ -4,6 +4,8 @@ import Counter, { Button } from "./counter";
 import ClientComponent from "./client-component";
 import SearverComponent from "./server-component";
 
+import { Sidebar } from "./components/sidebar";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -125,6 +127,10 @@ export default function Home() {
           <ClientComponent>
             <SearverComponent />
           </ClientComponent>
+
+          <hr style={{ margin: "20px 0" }} />
+
+          <Sidebar />
 
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
