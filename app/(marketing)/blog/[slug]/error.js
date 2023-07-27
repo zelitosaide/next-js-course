@@ -11,6 +11,7 @@ export default function Error({ error, reset }) {
   return (
     <div>
       <h1>Something went wrong!</h1>
+      <h2>Message: {JSON.stringify(error.message)}</h2>
       <button 
         onClick={function() {
           // Attempt to recover by trying to re-render the segment
