@@ -13,7 +13,7 @@ export default async function Page({ params }) {
   const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.slug}`)
     .then(function(res) { return res.json(); });
 
-  throw new Error("Intentionaly :)");
+  // throw new Error("Intentionaly :)");
 
   return (
     <div>
