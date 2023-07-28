@@ -5,7 +5,8 @@ export default function Page() {
     <div>
       <h1>Home</h1>
       <Link className="block" href="/cart">Cart</Link>
-      <Link href="/settings">Settings</Link>
+      <Link className="block" href="/settings">Settings</Link>
+      <Link href="/login">Login</Link>
     </div>
   );
 }
