@@ -1,7 +1,7 @@
 export default async function Page() {
   return (
     <div>
-      <h1>Analytics :)</h1>
+      <h1>Feed</h1>
     </div>
   );
 }
