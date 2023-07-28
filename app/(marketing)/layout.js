@@ -1,7 +1,7 @@
 import "../globals.css";
 // import { getUser } from "../lib/auth";
 
-export default function MarketingLayout({ children, analytics, team, settings }) {
+export default function MarketingLayout({ children, analytics, team, auth }) {
   // const isLoggedIn = getUser();
 
   return (
@@ -13,7 +13,7 @@ export default function MarketingLayout({ children, analytics, team, settings })
           {/* {isLoggedIn ? analytics : team} */}
           {/* {analytics}
           {team} */}
-          {settings}
+          {auth}
           {children}
         </div>
       </body>
