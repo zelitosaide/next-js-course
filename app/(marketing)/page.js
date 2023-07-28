@@ -4,7 +4,8 @@ export default function Page() {
   return (
     <div>
       <h1>Home</h1>
-      <Link href="/cart">Cart</Link>
+      <Link className="block" href="/cart">Cart</Link>
+      <Link href="/settings">Settings</Link>
     </div>
   );
 }
