@@ -1,7 +1,6 @@
 import "../globals.css";
 
 export default function MarketingLayout({ children, analytics, team }) {
-  console.log(analytics);
 // info.med@useMemo.mz/ fameduem@gmail.com
   return (
     <html>
@@ -10,6 +9,7 @@ export default function MarketingLayout({ children, analytics, team }) {
           <h1>Marketing Layout</h1>
           <h2>Parallel Routes</h2>
           {analytics}
+          {team}
           {children}
         </div>
       </body>
