@@ -12,7 +12,7 @@ export default function MarketingLayout({ children, analytics, team }) {
           <h2>Parallel Routes</h2>
           {/* {isLoggedIn ? analytics : team} */}
           {analytics}
-          {team}
+          {/* {team} */}
           {children}
         </div>
       </body>
