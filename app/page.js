@@ -1,22 +1,23 @@
-async function getDate() {
-  const res = await fetch("http://localhost:3001", {
-    cache: "no-cache"
-  });
+// import { getDate } from "./utils/api";
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
+import { db } from "./utils/database";
 
-  return res.json();
+export const revalidate = 3600;
+
+async function getDBVersion() {
+  const res = await db.query("SELECT version();");
+  return res;
 }
 
 export default async function Page() {
-  const date = await getDate();
+  // const date = await getDate();
+  const version = await getDBVersion();
 
   return (
     <div>
       <h1>Home</h1>
-      <pre>{JSON.stringify(date)}</pre>
+      {/* <pre>{JSON.stringify(date)}</pre> */}
+      <pre>{JSON.stringify(version)}</pre>
     </div>
   );
 }
