@@ -1,6 +1,24 @@
 import { Suspense } from "react";
 import Albums from "./albums";
-import { getArtist, getArtistAlbums } from "../api";
+import { getArtist, getArtistAlbums, getArtistPlaylists } from "./api";
+
+async function Playlists({ artistID }) {
+  // Wait for the playlists
+  const playlists = await getArtistPlaylists(artistID);
+
+  return (
+    <>
+      <h1>Playlists:</h1>
+      <ul>
+        {playlists.map(function(playlist) {
+          return (
+            <li key={playlist.id}>{playlist.name}</li>
+            );
+          })}
+      </ul>
+    </>
+  );
+}
 
 export default async function Page({ params: { slug }}) {
   // Initiate both requests in parallel
