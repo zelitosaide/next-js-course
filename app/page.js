@@ -7,7 +7,7 @@ async function getDate() {
     throw new Error("Failed to fetch data");
   }
 
-  return res.text();
+  return res.json();
 }
 
 export default async function Page() {
