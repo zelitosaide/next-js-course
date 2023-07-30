@@ -35,9 +35,14 @@ export default async function Page({ params: { slug }}) {
     <>
       <h1>Name: {artist.name}</h1>
       {/* Send the artist information first, and wrap albums in a suspense boundary */}
+      <hr />
       <Suspense fallback={<div>Loading...</div>}>
         {/* <Albums list={albums} /> */}
         <Albums promise={albumsData} />
+      </Suspense>
+      <hr />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Playlists artistID={slug} />
       </Suspense>
     </>
   );
