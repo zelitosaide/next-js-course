@@ -1,3 +1,5 @@
+import Albums from "./albums";
+
 async function getArtist(slug) {
   const res = await fetch(`http://localhost:3001/artists/${slug}`);
   return res.json();
@@ -19,7 +21,7 @@ export default async function Page({ params: { slug }}) {
   return (
     <>
       <h1>Name: {artist.name}</h1>
-      <ul></ul>
+      <Albums list={albums} />
     </>
   );
 }
