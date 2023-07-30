@@ -14,6 +14,7 @@ export default async function Page() {
   return (
     <div>
       <h1>Home</h1>
+      <pre>{JSON.stringify(post)}</pre>
     </div>
   );
 }
