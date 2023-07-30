@@ -1,15 +1,6 @@
 import { Suspense } from "react";
 import Albums from "./albums";
-
-async function getArtist(slug) {
-  const res = await fetch(`http://localhost:3001/artists/${slug}`);
-  return res.json();
-}
-
-async function getArtistAlbums(slug) {
-  const res = await fetch(`http://localhost:3001/artists/${slug}/albums`);
-  return res.json();
-}
+import { getArtist, getArtistAlbums } from "../api";
 
 export default async function Page({ params: { slug }}) {
   // Initiate both requests in parallel
