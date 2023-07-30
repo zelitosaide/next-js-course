@@ -1,7 +1,10 @@
-export default function Albums({ list }) {
+// export default function Albums({ list }) {
+export default async function Albums({ promise }) {
+  const albums = await promise;
+
   return (
     <ul>
-      {list.map(function(album) {
+      {albums.map(function(album) {
         return (
           <li key={album.id}>
             <h2>Title: {album.title}</h2>
