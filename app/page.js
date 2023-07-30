@@ -1,5 +1,4 @@
 async function getDate() {
-  // const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
   const res = await fetch("http://localhost:3001", {
     cache: "no-cache"
   });
