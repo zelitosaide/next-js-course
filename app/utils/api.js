@@ -13,6 +13,15 @@ export async function getArtistPlaylists(slug) {
   return res.json();
 }
 
+export async function getFormattedDate() {
+  // { next: { revalidate: 10 } 
+  const res = await fetch("http://localhost:3001", {
+    next: { revalidate: 10 }
+  });
+
+  return res.json();
+}
+
 export async function getDate() {
   const res = await fetch("http://localhost:3001", {
     cache: "no-cache"
