@@ -1,11 +1,10 @@
-import "../globals.css";
+import "./globals.css";
 
-export default function ShopLayout({ children }) {
+export default function MarketingLayout({ children }) {
   return (
     <html>
       <body>
         <div>
-          <h1>Shop Layout</h1>
           {children}
         </div>
       </body>
