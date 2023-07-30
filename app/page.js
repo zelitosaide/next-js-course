@@ -1,20 +1,23 @@
-async function getPost() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+async function getDate() {
+  // const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  const res = await fetch("http://localhost:3001", {
+    cache: "no-cache"
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
 
-  return res.json();
+  return res.text();
 }
 
 export default async function Page() {
-  const post = await getPost();
+  const date = await getDate();
 
   return (
     <div>
       <h1>Home</h1>
-      <pre>{JSON.stringify(post)}</pre>
+      <pre>{JSON.stringify(date)}</pre>
     </div>
   );
 }
