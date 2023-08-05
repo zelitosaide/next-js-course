@@ -1,5 +1,7 @@
 // import { getDate } from "./utils/api";
 
+import { db } from "./utils/database";
+
 // import { getFormattedDate, getDate } from "./utils/api";
 
 // import { db } from "./utils/database";
@@ -49,14 +51,20 @@ async function getData() {
 
 // export const dynamic = "force-dynamic";
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
+
+async function selectNow() {
+  const res = await db.query("SELECT NOW();");
+  return res;
+}
 
 export default async function Page() {
   // const date = await getDate();
   // const version = await getDBVersion();
   // const formattedDate = await getFormattedDate();
   
-  const data = await getData();
+  // const data = await getData();
+  const now = await selectNow();
 
   return (
     <div>
@@ -64,7 +72,8 @@ export default async function Page() {
       {/* <pre>{JSON.stringify(date)}</pre> */}
       {/* <pre>{JSON.stringify(version)}</pre> */}
       {/* <pre>{JSON.stringify(formattedDate)}</pre> */}
-      <pre>{JSON.stringify(data)}</pre>
+      {/* <pre>{JSON.stringify(data)}</pre> */}
+      <pre>{JSON.stringify(now.rows)}</pre>
     </div>
   );
 }
