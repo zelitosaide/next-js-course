@@ -30,9 +30,11 @@ async function getData() {
   //   cache: "no-cache"
   // });
 
-  const res = await fetch("http://localhost:3001", {
-    next: { revalidate: 0 }
-  });
+  // const res = await fetch("http://localhost:3001", {
+  //   next: { revalidate: 0 }
+  // });
+
+  const res = await fetch("http://localhost:3001");
 
   return res.json();
 }
