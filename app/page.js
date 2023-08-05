@@ -12,7 +12,7 @@
 // }
 
 async function getData() {
-  const res = await fetch("http://localhost:3001");
+  const res = await fetch("http://localhost:3001", { cache: "force-cache" });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
