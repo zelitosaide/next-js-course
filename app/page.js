@@ -18,13 +18,17 @@ async function getData() {
   //   next: { revalidate: 3600 } 
   // });
 
-  const res = await fetch("http://localhost:3001", { 
-    next: { tags: ["collection"] } 
-  });
+  // const res = await fetch("http://localhost:3001", { 
+  //   next: { tags: ["collection"] } 
+  // });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
+  // if (!res.ok) {
+  //   throw new Error("Failed to fetch data");
+  // }
+  
+  const res = await fetch("http://localhost:3001", {
+    cache: "no-cache"
+  });
 
   return res.json();
 }
