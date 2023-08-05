@@ -12,7 +12,7 @@
 // }
 
 async function getData() {
-  const res = fetch("http://localhost:3001");
+  const res = await fetch("http://localhost:3001");
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -34,6 +34,7 @@ export default async function Page() {
       {/* <pre>{JSON.stringify(date)}</pre> */}
       {/* <pre>{JSON.stringify(version)}</pre> */}
       {/* <pre>{JSON.stringify(formattedDate)}</pre> */}
+      <pre>{JSON.stringify(data)}</pre>
     </div>
   );
 }
