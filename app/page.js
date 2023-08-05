@@ -25,9 +25,13 @@ async function getData() {
   // if (!res.ok) {
   //   throw new Error("Failed to fetch data");
   // }
-  
+
+  // const res = await fetch("http://localhost:3001", {
+  //   cache: "no-cache"
+  // });
+
   const res = await fetch("http://localhost:3001", {
-    cache: "no-cache"
+    next: { revalidate: 0 }
   });
 
   return res.json();
