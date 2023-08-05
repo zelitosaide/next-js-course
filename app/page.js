@@ -25,6 +25,8 @@ export default async function Page() {
   // const date = await getDate();
   // const version = await getDBVersion();
   // const formattedDate = await getFormattedDate();
+  
+  const data = await getData();
 
   return (
     <div>
