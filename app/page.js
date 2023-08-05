@@ -14,8 +14,12 @@
 async function getData() {
   // const res = await fetch("http://localhost:3001", { cache: "force-cache" });
 
+  // const res = await fetch("http://localhost:3001", { 
+  //   next: { revalidate: 3600 } 
+  // });
+
   const res = await fetch("http://localhost:3001", { 
-    next: { revalidate: 3600 } 
+    next: { tags: ["collection"] } 
   });
 
   if (!res.ok) {
