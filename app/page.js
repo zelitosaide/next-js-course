@@ -1,6 +1,6 @@
 // import { getDate } from "./utils/api";
 
-import { db } from "./utils/database";
+import { selectNow } from "./utils/database";
 
 // import { getFormattedDate, getDate } from "./utils/api";
 
@@ -52,11 +52,6 @@ async function getData() {
 // export const dynamic = "force-dynamic";
 
 // export const dynamic = "force-dynamic";
-
-async function selectNow() {
-  const res = await db.query("SELECT NOW();");
-  return res;
-}
 
 export default async function Page() {
   // const date = await getDate();
