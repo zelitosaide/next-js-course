@@ -49,6 +49,8 @@ async function getData() {
 
 // export const dynamic = "force-dynamic";
 
+export const dynamic = "force-dynamic";
+
 export default async function Page() {
   // const date = await getDate();
   // const version = await getDBVersion();
