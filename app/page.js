@@ -13,7 +13,7 @@
 
 async function getData() {
   // const res = await fetch("http://localhost:3001", { cache: "force-cache" });
-  
+
   const res = await fetch("http://localhost:3001", { 
     next: { revalidate: 3600 } 
   });
@@ -24,6 +24,8 @@ async function getData() {
 
   return res.json();
 }
+
+export const revalidate = 3600; // revalidate at most every hour
 
 export default async function Page() {
   // const date = await getDate();
