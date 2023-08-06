@@ -2,6 +2,7 @@ import { Suspense } from "react";
 
 import Albums from "./albums";
 import { getArtist, getArtistAlbums, getArtistPlaylists, preload } from "../../utils/api";
+import { Artist } from "./artist";
 
 async function Playlists({ artistID }) {
   // Wait for the playlists
@@ -34,13 +35,25 @@ export default async function Page({ params: { slug }}) {
 
   // const artist = await getArtist(slug);
 
+  // starting loading item data
   preload(slug);
+
+  // perform another asynchronous task
+  const albums = await getArtistAlbums(slug);
 
   return (
     <>
+      {!!albums ? (
+        <>
+          <Artist slug={slug} />
+          <hr />
+          <Albums list={albums} />
+        </>
+      ) : null}
+      
       {/* <h1>Name: {artist.name}</h1> */}
       {/* Send the artist information first, and wrap albums in a suspense boundary */}
-      <hr />
+      {/* <hr /> */}
       {/* <Suspense fallback={<div>Loading...</div>}>
         <Albums list={albums} />
         <Albums promise={albumsData} />
