@@ -7,7 +7,7 @@ export default function AddToCard({ productId }) {
 
     const cardId = cookies().get("cardId")?.value;
     // await saveToDb({ cardId, data });
-    console.log(cardId, "Zelito");
+    console.log(productId, "Zelito");
   }
 
   return (
