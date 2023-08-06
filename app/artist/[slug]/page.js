@@ -23,30 +23,30 @@ async function Playlists({ artistID }) {
 
 export default async function Page({ params: { slug }}) {
   // Initiate both requests in parallel
-  // const artistData = getArtist(slug);
-  // const albumsData = getArtistAlbums(slug);
+  const artistData = getArtist(slug);
+  const albumsData = getArtistAlbums(slug);
 
   // Wait for the promises to resolve
-  // const [artist, albums] = await Promise.all([artistData, albumsData]);
+  const [artist, albums] = await Promise.all([artistData, albumsData]);
 
   // Wait for the artist's promise to resolve first
   // const artist = await artistData
 
-  const artist = await getArtist(slug);
+  // const artist = await getArtist(slug);
 
   return (
     <>
       <h1>Name: {artist.name}</h1>
       {/* Send the artist information first, and wrap albums in a suspense boundary */}
-      {/* <hr />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Albums list={albums} />
-        <Albums promise={albumsData} />
-      </Suspense> */}
       <hr />
       <Suspense fallback={<div>Loading...</div>}>
-        <Playlists artistID={slug} />
+        <Albums list={albums} />
+        {/* <Albums promise={albumsData} /> */}
       </Suspense>
+      {/* <hr />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Playlists artistID={slug} />
+      </Suspense> */}
     </>
   );
 }
