@@ -1,6 +1,7 @@
 // import { getDate } from "./utils/api";
 
 import AddToCard from "./add-to-card";
+import AddToCardClient from "./add-to-card-client";
 import { selectNow } from "./utils/database";
 
 // import { getFormattedDate, getDate } from "./utils/api";
@@ -71,6 +72,7 @@ export default async function Page() {
       {/* <pre>{JSON.stringify(data)}</pre> */}
       {/* <pre>{JSON.stringify(now.rows)}</pre> */}
       <AddToCard productId={1} />
+      <AddToCardClient productId={2} />
     </div>
   );
 }
