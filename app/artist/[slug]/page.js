@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 
 import Albums from "./albums";
-import { getArtist, getArtistAlbums, getArtistPlaylists, preload } from "../../utils/api";
-import { Artist } from "./artist";
+import { getArtist, getArtistAlbums, getArtistPlaylists } from "../../utils/api";
+import { Artist, preload } from "./artist";
 
 async function Playlists({ artistID }) {
   // Wait for the playlists
