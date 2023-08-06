@@ -7,11 +7,12 @@ export default function AddToCard({ productId }) {
 
     const cardId = cookies().get("cardId")?.value;
     // await saveToDb({ cardId, data });
-    console.log(productId, "Zelito");
+    console.log(productId, data);
   }
 
   return (
     <form action={addItem}>
+      <input type="text" name="name" />
       <button type="submit">Add to Card</button>
     </form>
   );
