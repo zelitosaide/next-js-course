@@ -33,3 +33,7 @@ export async function getDate() {
 
   return res.json();
 }
+
+export function preload(slug) {
+  void getArtist(slug);
+}
