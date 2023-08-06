@@ -1,5 +1,6 @@
 // import { getDate } from "./utils/api";
 
+import AddToCard from "./add-to-card";
 import { selectNow } from "./utils/database";
 
 // import { getFormattedDate, getDate } from "./utils/api";
@@ -68,7 +69,8 @@ export default async function Page() {
       {/* <pre>{JSON.stringify(version)}</pre> */}
       {/* <pre>{JSON.stringify(formattedDate)}</pre> */}
       {/* <pre>{JSON.stringify(data)}</pre> */}
-      <pre>{JSON.stringify(now.rows)}</pre>
+      {/* <pre>{JSON.stringify(now.rows)}</pre> */}
+      <AddToCard productId={1} />
     </div>
   );
 }
