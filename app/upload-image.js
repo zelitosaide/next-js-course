@@ -7,12 +7,10 @@ export default function UploadImage() {
     formData.append("name", data.get("name"))
     formData.append("file", data.get("file"));
 
-    const res = await fetch("http://localhost:3001/images/upload-file", {
+    await fetch("http://localhost:3001/images/upload-file", {
       method: "POST",
       body: formData
     });
-
-    console.log(await res.json());
   }
  
   return (
