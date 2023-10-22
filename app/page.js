@@ -2,8 +2,10 @@
 
 // import AddToCard from "./add-to-card";
 // import AddToCardClient from "./add-to-card-client";
-import UploadImage from "./upload-image";
-import { selectNow } from "./utils/database";
+// import UploadImage from "./upload-image";
+// import { selectNow } from "./utils/database";
+
+// import Form from "./form/page";
 
 // import { getFormattedDate, getDate } from "./utils/api";
 
@@ -62,7 +64,7 @@ export default async function Page() {
   // const formattedDate = await getFormattedDate();
   
   // const data = await getData();
-  const now = await selectNow();
+  // const now = await selectNow();
 
   return (
     <div>
@@ -74,7 +76,9 @@ export default async function Page() {
       {/* <pre>{JSON.stringify(now.rows)}</pre> */}
       {/* <AddToCard productId={1} /> */}
       {/* <AddToCardClient productId={2} /> */}
-      <UploadImage />
+      {/* <UploadImage /> */}
+
+      {/* <Form /> */}
     </div>
   );
 }
