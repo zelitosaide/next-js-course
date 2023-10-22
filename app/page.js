@@ -1,5 +1,7 @@
 // import { getDate } from "./utils/api";
 
+import Link from "next/link";
+
 // import AddToCard from "./add-to-card";
 // import AddToCardClient from "./add-to-card-client";
 // import UploadImage from "./upload-image";
@@ -68,7 +70,8 @@ export default async function Page() {
 
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Hello, Home page!</h1>
+      <Link href="/dashboard">Dashboard</Link>
       {/* <pre>{JSON.stringify(date)}</pre> */}
       {/* <pre>{JSON.stringify(version)}</pre> */}
       {/* <pre>{JSON.stringify(formattedDate)}</pre> */}
