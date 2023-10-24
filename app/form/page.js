@@ -8,7 +8,7 @@ export default function Page() {
     const email = formData.get("email");
     const password = formData.get("password");
 
-    const res = await fetch("/api/sign-in", {
+    await fetch("/api/sign-in", {
       method: "POST",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
