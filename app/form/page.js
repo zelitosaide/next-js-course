@@ -14,7 +14,7 @@ export default function Page() {
       },
     });
 
-    console.log(response);
+    console.log(await response.json());
   }
 
   return (
