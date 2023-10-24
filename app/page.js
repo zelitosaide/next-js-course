@@ -7,7 +7,7 @@ import Link from "next/link";
 // import UploadImage from "./upload-image";
 // import { selectNow } from "./utils/database";
 
-// import Form from "./form/page";
+import Form from "./form/page";
 
 // import { getFormattedDate, getDate } from "./utils/api";
 
@@ -60,7 +60,8 @@ async function getData() {
 
 // export const dynamic = "force-dynamic";
 
-export default async function Page() {
+// export default async function Page() {
+export default function Page() {
   // const date = await getDate();
   // const version = await getDBVersion();
   // const formattedDate = await getFormattedDate();
@@ -81,7 +82,7 @@ export default async function Page() {
       {/* <AddToCardClient productId={2} /> */}
       {/* <UploadImage /> */}
 
-      {/* <Form /> */}
+      <Form />
     </div>
   );
 }
