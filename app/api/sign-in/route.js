@@ -1,3 +1,5 @@
+import decode from "jwt-decode";
+
 export async function POST(request) {
   const { email, password } = await request.json();
 
@@ -11,5 +13,7 @@ export async function POST(request) {
 
   const data = await res.json();
 
-  return Response.json(data);
+  const { sub: id, email: mail, role } = decode(data.accessToken);
+
+  return Response.json({ id, email: mail, role });
 }
