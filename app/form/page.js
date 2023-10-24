@@ -5,16 +5,18 @@ export default function Page() {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
+    const email = formData.get("email");
+    const password = formData.get("password");
 
-    const response = await fetch("/api/sign-in", {
+    const res = await fetch("/api/sign-in", {
       method: "POST",
-      body: JSON.stringify({ email: formData.get("email"), password: formData.get("password") }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
+      body: JSON.stringify({ email, password }),
     });
 
-    console.log(await response.json());
+    console.log(await res.json());
   }
 
   return (
