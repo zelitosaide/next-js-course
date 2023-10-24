@@ -8,8 +8,13 @@ export default function Page() {
 
     const response = await fetch("/api/sign-in", {
       method: "POST",
-      body: JSON.stringify({ email: formData.get("email"), password: formData.get("password") })
+      body: JSON.stringify({ email: formData.get("email"), password: formData.get("password") }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
     });
+
+    console.log(response);
   }
 
   return (
