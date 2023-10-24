@@ -15,8 +15,6 @@ export default function Page() {
       },
       body: JSON.stringify({ email, password }),
     });
-
-    console.log(await res.json());
   }
 
   return (
